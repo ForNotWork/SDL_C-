@@ -7,10 +7,11 @@ namespace code{
             const static int NPARTICLES = 5000;
         private:
         Particle * m_pParticle;
+        int lastTime;
         public:
             Swarm();
             virtual ~Swarm();
-            void update();
+            void update(int elapsed);
             const Particle * const getParticles(){ return m_pParticle;};
     };
 }/*namespace code*/
